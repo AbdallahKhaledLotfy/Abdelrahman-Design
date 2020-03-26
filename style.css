@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Rambla|Staatliches&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    transition: 0.5s;
+
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #070707;
+    z-index: 100000000
+}
+
+.preloader.active {
+    transform: translateY(-100vh);
+    transition: ease-in-out 2s;
+    transition-delay: 1s
+}
+
+.preloader::before {
+    content: 'Welcome to my Portfolio';
+    position: absolute;
+    font-size: 3em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, .03);
+    font-weight: 900
+}
+
+.counter {
+    position: relative;
+    color: #fff;
+    font-size: 16em;
+    font-weight: 700;
+    z-index: 1
+}
+
+.counter::after {
+    content: '';
+    font-size: 0.5em
+}
+
+.hide {
+    opacity: 0;
+    transition: 1s;
+    pointer-events: none
+}
+
+body.night {
+    background: #00151f;
+}
+
+.toggle {
+    position: absolute;
+    top: 110%;
+    right: 50px;
+    background: #fff;
+    border: 2px solid #00151f;
+    width: 45px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.5s;
+    z-index: 1000px;
+}
+
+.toggle.active {
+    background: #00151f;
+    border: 2px solid #fff;
+
+}
+
+.toggle::before {
+    content: '';
+    position: absolute;
+    top: 1px;
+    left: 2px;
+    width: 14px;
+    height: 14px;
+    background: #00151f;
+    border-radius: 50px;
+    transition: 0.5s;
+
+}
+
+.toggle.active::before {
+    left: 25px;
+    background: #fff;
+}
+
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-border: #ffffff34;
+    --font-staat: 'Staatliches', cursive;
+    --font-os: 'Oswald', sans-serif;
+    --font-ram: 'Rambla', sans-serif;
+}
+
+
+/* global classes */
+.font-staat {
+    font: normal 400 18px var(--font-staat);
+}
+
+.font-os {
+    font: normal 300 18px var(--font-os);
+}
+
+.font-ram {
+    font: normal bold 18px var(--font-ram);
+}
+
+body.night .font-ram {
+    font: normal bold 18px;
+    color: white;
+}
+
+.font-size-40 {
+    font-size: 40px;
+}
+
+.font-size-34 {
+    font-size: 34px;
+}
+
+body.night .font-size-34 {
+    font-size: 34px;
+    color: white;
+}
+
+body.night .text-black-50 {
+    color: #6c757d !important;
+}
+
+
+body.night .bg-light {
+    background-color: #00151f !important;
+}
+
+.font-size-27 {
+    font-size: 27px;
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+.font-size-16 {
+    font-size: 16px;
+}
+
+
+
+.bgcolor-black {
+    background-color: var(--color-black);
+}
+
+
+
+/* #global classes */
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    transition: left .5s ease;
+}
+
+#header nav {
+    height: 100vh;
+}
+
+#header .site-title .navbar-brand {
+    letter-spacing: 2px;
+    color: var(--color-white);
+}
+
+#header .nav-link {
+    margin: .7rem 1rem;
+    border-bottom: 1px solid var(--color-border);
+    text-transform: uppercase;
+}
+
+#header .nav-link:hover {
+    color: var(--color-white) !important;
+}
+
+#header .toggle-button {
+    background: none;
+    color: var(--color-black);
+    position: fixed;
+    top: 25px;
+    right: 20px;
+    border: 1px solid var(--color-border);
+}
+
+.toggle-left {
+    left: 0 !important;
+    width: 1000px !important;
+}
+
+/* site-main */
+
+.site-banner .banner-area {
+    background: url(./assets/Banner_image.jpg) no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.site-banner .banner-area .author {
+    margin: 0;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.site-banner .banner-area .author .author-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: auto;
+    background: url(./assets/about.jpg) no-repeat;
+    background-size: 200%;
+    background-position: 40% 0;
+}
+
+.skill .bars p,
+.site-content .skill .bars span {
+    line-height: 10px;
+}
+
+#footer form .row .col input[type="text"],
+#footer form .row .col input[type="email"],
+#footer form textarea {
+    border: none;
+    border-radius: 0;
+    border-bottom: 1px solid gray;
+    padding: 1.5rem 1rem;
+}
+
+@media screen and (min-width: 768px) {
+    .toggle-button {
+        display: none;
+    }
+
+    #header {
+        z-index: 0;
+    }
+}
+
+/* #site-main */
+
+.mr-3,
+.mx-3 {
+    margin-right: 6px !important;
+    cursor: pointer;
+}
+
+body.night .text-center {
+    text-align: center !important;
+    color: #6c757d !important
+}
+
+body.night .progress {
+    display: -ms-flexbox;
+    display: flex;
+    height: 1rem;
+    overflow: hidden;
+    font-size: .75rem;
+    background-color: #6c757d;
+    border-radius: .25rem;
+}
+
+
+.end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+
+}
+
+.contact {
+    width: 80%;
+    padding: 20px
+}
+
+.contact h2 {
+    font: normal 400 18px var(--font-staat);
+    width: 100%;
+    color: black;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px
+}
+
+body.night .contact h2 {
+    font: normal 400 18px var(--font-staat);
+    width: 100%;
+    color: white;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 10px
+}
+
+.contact .row100 {
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(autofit, minmax(300px, 1fr))
+}
+
+.contact .row100 .col {
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 10px;
+    transition: 0.5s
+}
+
+.contact .row100 .inputBox {
+    position: relative;
+    width: 100%;
+    height: 40px;
+    color: #45f3ff;
+
+
+}
+
+
+.contact .row100 .inputBox input,
+.contact .row100 .inputBox.textarea textarea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    padding: 0 10px;
+    z-index: 1;
+    color: #000
+}
+
+
+.contact .row100 .inputBox .text {
+    font: normal 300 18px var(--font-os);
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 20px;
+    font-size: 18px;
+    font-weight: 300;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+    color: #6c757d !important
+}
+
+.contact .row100 .inputBox input:focus+.text,
+.contact .row100 .inputBox input:valid+.text {
+    top: -35px;
+    left: -10px;
+}
+
+
+.contact .row100 .inputBox .line {
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #45f3ff;
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none
+}
+
+.contact .row100 .inputBox input:focus~.line,
+.contact .row100 .inputBox input:valid~.line {
+    height: 100%;
+}
+
+.contact .row100 .inputBox.textarea {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    padding: 10px 0;
+
+}
+
+
+.contact .row100 .inputBox.textarea textarea {
+    height: 100%;
+    resize: none
+}
+
+
+.contact .row100 .inputBox textarea:focus+.text,
+.contact .row100 .inputBox textarea:valid+.text {
+    top: -35px;
+    left: -10px;
+}
+
+.contact .row100 .inputBox textarea:focus~.line,
+.contact .row100 .inputBox textarea:valid~.line {
+    height: 100%;
+}
+
+
+input[type="submit"] {
+    border: none;
+    padding: 7px 35px;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #343a40;
+    border-color: #343a40;
+    font-size: 18px;
+    border-radius: 5px
+}
+
+
+input[type="submit"]:hover {
+
+    background-color: rgba(52, 58, 64, 0.976);
+    ;
+
+}
+
+
+
+
+
+
+
+
+#playlist {
+    list-style: none;
+}
