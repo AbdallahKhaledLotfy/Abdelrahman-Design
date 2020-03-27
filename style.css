@@ -7,6 +7,31 @@ body {
 
 }
 
+button a {
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+    font-size: 15px;
+}
+
+a:hover {
+    color: black;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+button:hover {
+    color: #343a40;
+}
+
+.face {
+    color: rgb(33, 37, 41);
+}
+
+body.night .face {
+    color: #343a40;
+}
+
 .preloader {
     position: fixed;
     top: 0;
@@ -53,11 +78,12 @@ body {
     pointer-events: none
 }
 
+
 body.night {
     background: #00151f;
 }
 
-.toggle {
+.toggle-black {
     position: absolute;
     top: 110%;
     right: 50px;
@@ -68,16 +94,16 @@ body.night {
     cursor: pointer;
     border-radius: 20px;
     transition: 0.5s;
-    z-index: 1000px;
+    z-index: 1000000;
 }
 
-.toggle.active {
+.toggle-black.active {
     background: #00151f;
     border: 2px solid #fff;
 
 }
 
-.toggle::before {
+.toggle-black::before {
     content: '';
     position: absolute;
     top: 1px;
@@ -90,10 +116,12 @@ body.night {
 
 }
 
-.toggle.active::before {
+.toggle-black.active::before {
     left: 25px;
     background: #fff;
 }
+
+
 
 :root {
     --color-black: #000000;
@@ -228,13 +256,13 @@ body.night .bg-light {
 }
 
 .site-banner .banner-area .author .author-img {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 220px;
     border-radius: 50%;
     margin: auto;
-    background: url(./assets/about.jpg) no-repeat;
-    background-size: 200%;
-    background-position: 40% 0;
+    background: url(./assets/2.jfif) no-repeat;
+    background-size: 100%;
+    background-position: 50% -23px;
 }
 
 .skill .bars p,
@@ -441,15 +469,4 @@ input[type="submit"]:hover {
     background-color: rgba(52, 58, 64, 0.976);
     ;
 
-}
-
-
-
-
-
-
-
-
-#playlist {
-    list-style: none;
 }
