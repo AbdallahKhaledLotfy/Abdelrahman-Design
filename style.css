@@ -606,7 +606,7 @@ input[type="submit"]:hover {
         position: absolute;
         font-size: 3em;
         text-transform: uppercase;
-        color: rgba(255, 255, 255, .03);
+        color: rgba(255, 255, 255, .09);
         font-weight: 900;
         font-size: 20px;
 
