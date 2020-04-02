@@ -93,7 +93,7 @@ body.night .face {
 }
 
 .counter::after {
-    content: '';
+    content: '%';
     font-size: 0.5em
 }
 
@@ -643,7 +643,7 @@ input[type="submit"]:hover {
     }
 
     .counter::after {
-        content: '';
+        content: '%';
         font-size: 0.5em
     }
 
